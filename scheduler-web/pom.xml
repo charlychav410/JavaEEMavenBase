@@ -8,12 +8,12 @@
 		<version>1.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-
+	
 	<groupId>mx.com.cinepolis.scheduler</groupId>
 	<artifactId>scheduler-web</artifactId>
 	<name>Scheduler - WEB</name>
 	<packaging>war</packaging>
-
+		
 	<dependencies>
 		<dependency>
 			<groupId>mx.com.cinepolis.scheduler</groupId>
@@ -115,7 +115,7 @@
 			<artifactId>cors-filter</artifactId>
 			<version>2.6</version>
 		</dependency>
-
+	
 	</dependencies>
 
 	<build>
@@ -179,6 +179,8 @@
 				</plugins>
 			</build>
 		</profile-->
+		
+		
 	</profiles>
 </project>
 
