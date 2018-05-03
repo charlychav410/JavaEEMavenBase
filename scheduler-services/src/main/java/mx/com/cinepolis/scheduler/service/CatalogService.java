@@ -21,6 +21,9 @@ public interface CatalogService {
      * @param pais acepta un pais como String
      * @return Lista de estados
      */
-    List <CatalogsTO> getEstados(String pais);
+    List<CatalogsTO> getEstados(String pais);
+    
+    List<CatalogsTO> getLogin(String login);
+
 
 }

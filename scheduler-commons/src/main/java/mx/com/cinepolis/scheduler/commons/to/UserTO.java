@@ -1,22 +1,30 @@
 package mx.com.cinepolis.scheduler.commons.to;
 
+import java.io.Serializable;
+
 /**
  * @author ohurtado
  */
 
-public class UserTO {
+public class UserTO implements Serializable{
 
 
     private static final long serialVersionUID = -8853482566070472169L;
 
     private Long idUser;
 
-    private String name;
 
     private String userName;
 
     private String email;
 
+	
+	
+	private String name;
+	
+	
+	
+	
     /**
      * @return
      */

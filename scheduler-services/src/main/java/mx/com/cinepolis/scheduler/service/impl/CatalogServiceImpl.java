@@ -57,6 +57,22 @@ public class CatalogServiceImpl implements CatalogService{
     	
     	return catalogsTOList;
     }
+
+	@Override
+	public List<CatalogsTO> getLogin(String login) {
+    	List<CatalogsTO> loginTOList = new ArrayList<>();
+    	if(login.equals("charlychav410")) {
+    		loginTOList.add(new CatalogsTO() {
+			{ 
+    		setNames("Carlos Pacheco");
+    		setFollowers(2);
+    		setFollowings(1);
+    	
+    		}});
+    		}
+		
+		return loginTOList;
+	}
     
 }
 
