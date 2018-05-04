@@ -3,7 +3,6 @@ package mx.com.cinepolis.scheduler.facade;
 import mx.com.cinepolis.scheduler.commons.to.CatalogsTO;
 import mx.com.cinepolis.scheduler.commons.to.UserTO;
 import mx.com.cinepolis.scheduler.service.CatalogService;
-import mx.com.cinepolis.scheduler.service.GitHubService;
 
 import java.util.List;
 
@@ -18,12 +17,15 @@ public class CatalogFacadeEJB {
     @Inject
     CatalogService catalogService;
   	
-    @Inject
-    GitHubService gitHubService;
+   
 
     public UserTO getSimpleUser()
     {
         return catalogService.getUser();
+    }
+    
+    public List<UserTO> getAllUSers(){
+    	return catalogService.getAllUsers();
     }
     
     public List<CatalogsTO> getEstadoList(String pais){
@@ -36,11 +38,7 @@ public class CatalogFacadeEJB {
     }
     
   
-    
-	public Boolean getUser(String user, String password)
-	    {
-	       return gitHubService.getUser(user, password);
-	    }
+ 
 	 
 
 }

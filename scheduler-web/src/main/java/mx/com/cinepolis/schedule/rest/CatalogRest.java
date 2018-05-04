@@ -29,11 +29,12 @@ public class CatalogRest {
 
     @GET
     @Produces("application/json")
-    @Path("/user")
+    @Path("/getus")
     public Response getSimpleCatalog()
     {
         UserTO userTO = catalogFacadeEJB.getSimpleUser();
         return Response.ok().entity(userTO).build();
+    	
     }
     
     @GET
@@ -72,19 +73,29 @@ public class CatalogRest {
     	return Response.ok().entity(entity).build();
     }*/
     
-  
+    @GET
+    @Produces("application/json")
+    @Path("/user")
+    public Response getAllUsers() {
+        List<UserTO> userTOList = catalogFacadeEJB.getAllUSers();
+        
+        GenericEntity<List<UserTO>> entity = new GenericEntity<List<UserTO>>(userTOList) {};
+        
+        return Response.ok().entity(entity).build();
+    }
     
      @GET
      @Produces("application/json")
      @Path("/log")
      public Response getUser(@Context UriInfo uiu) {
      	
-     	MultivaluedMap<String , String> queryParams= uiu.getQueryParameters();
+     /*	MultivaluedMap<String , String> queryParams= uiu.getQueryParameters();
      	String user = queryParams.getFirst("log");
      	String password = queryParams.getFirst("pass");
      	Boolean userCompair = catalogFacadeEJB.getUser(user, password);
      	
-     	return Response.ok().entity(userCompair.toString()).build();
+     	return Response.ok().entity(userCompair.toString()).build(); */
+    	 return null;
      }  
 
 }
