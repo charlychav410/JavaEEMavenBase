@@ -1,6 +1,8 @@
 package mx.com.cinepolis.scheduler.service;
 
 import java.util.List;
+
+import mx.com.arquitectura.base.model.UserDO;
 import mx.com.cinepolis.scheduler.commons.to.CatalogsTO;
 import mx.com.cinepolis.scheduler.commons.to.UserTO;
 
@@ -24,7 +26,17 @@ public interface CatalogService {
 			     */
 			    
 			    List<UserTO>getAllUsers();
+			   
+		
+			    
+			    
+			    List<UserTO>setAllUsers();
 			    
 			    List<CatalogsTO> getLogin(String login);
+
+
+				List<UserTO> findUsers();
+
+				void setUser(UserTO userTO);
 
 }

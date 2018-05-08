@@ -29,6 +29,17 @@ public class CatalogServiceImpl implements CatalogService{
         userTO.setLogin("jrodriguez");
         return userTO; 
     }
+   @Override
+   public void setUser(UserTO userTO) {
+       
+	 
+	   UserDO userDO = new UserDO();
+       userDO.setName(userTO.getName());
+       userDO.setAvatarUrl(userTO.getAvatarUrl());
+       userDO.setLogin(userTO.getLogin());
+       userDAO.create(userDO);
+   
+   }
     
     @Override 
     public List<CatalogsTO> getEstados (String pais){
@@ -100,6 +111,34 @@ public class CatalogServiceImpl implements CatalogService{
 			 
 			}}
 			).collect(Collectors.toList());	
+	}
+	
+	@Override
+	public List<UserTO> findUsers() {
+		List<UserDO> userDOList= userDAO.findAll();
+		
+		return userDOList.
+			stream().
+			map(x-> new UserTO(){{
+			 setLogin(x.getLogin());
+			 setFollowing(x.getFollowing());
+			 setFollower(x.getFollowers());
+			 setAvatarUrl(x.getAvatarUrl());
+			 setName(x.getName());
+			 setIdUser(x.getIdUser());
+			 
+			}}
+			).collect(Collectors.toList());	
+	}
+
+	@Override
+	public List<UserTO> setAllUsers() {
+
+		
+		
+	List<UserTO> userTOList= new ArrayList<>();
+		
+		return null;
 	}
 
 }

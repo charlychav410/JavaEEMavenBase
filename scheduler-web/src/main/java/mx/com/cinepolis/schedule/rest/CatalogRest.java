@@ -23,6 +23,9 @@ import javax.ws.rs.core.UriInfo;
 @Path("/catalog")
 public class CatalogRest {
 
+	
+	
+	
     @EJB
     private CatalogFacadeEJB catalogFacadeEJB;
     
@@ -83,6 +86,25 @@ public class CatalogRest {
         
         return Response.ok().entity(entity).build();
     }
+    
+   /* @GET
+    @Produces("application/json")
+    @Path("/user")
+    public Response findUsers() {
+        List<UserTO> userTOList = catalogFacadeEJB.findUSers();
+        
+        GenericEntity<List<UserTO>> entity = new GenericEntity<List<UserTO>>(userTOList) {};
+        
+        return Response.ok().entity(entity).build();
+    }*/
+    
+    /*@POST
+    @Path("/post")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void setUser(UserDO userTO) {
+    	catalogFacadeEJB.setUser(userTO);
+    }*/
+    
     
      @GET
      @Produces("application/json")

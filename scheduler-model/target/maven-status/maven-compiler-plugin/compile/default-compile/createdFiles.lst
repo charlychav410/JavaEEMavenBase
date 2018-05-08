@@ -1,1 +1,3 @@
 mx\com\arquitectura\base\model\UserDO.class
+mx\com\arquitectura\base\model\UserPermisoDO.class
+mx\com\arquitectura\base\model\UserSystemDO.class

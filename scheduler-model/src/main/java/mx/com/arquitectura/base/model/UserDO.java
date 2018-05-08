@@ -1,7 +1,6 @@
 package mx.com.arquitectura.base.model;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name ="CH_USER")

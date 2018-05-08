@@ -6,7 +6,12 @@
         <jta-data-source>jdbc/scheduleDS</jta-data-source>
 
         <class>mx.com.arquitectura.base.model.UserDO</class>
-
+        <class>mx.com.arquitectura.base.model.UserPermisoDO</class>
+        <class>mx.com.arquitectura.base.model.UserSystemDO</class>
+        <class>mx.com.cinepolis.scheduler.commons.to.UserPermisoTO</class>
+        <class>mx.com.cinepolis.scheduler.commons.to.UserSystemTO</class>
+		
+		
         <properties>
             <property name="eclipselink.logging.level" value="FINE" />
             <property name="eclipselink.logging.level.sql" value="FINE" />
